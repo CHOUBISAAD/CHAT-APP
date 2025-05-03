@@ -10,7 +10,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
         registry.addEndpoint("/ws")
-                .setAllowedOriginPatterns("*") // allow CORS
+                .setAllowedOriginPatterns("http://localhost:*", "https://chat-app-production-937f.up.railway.app")
                 .withSockJS();
     }
 
